@@ -37,7 +37,7 @@ body {
 
 .hero {
   height: 90vh;
-  background: url('https://i.ibb.co/yXCM5vP/anime-bg.gif') center/cover no-repeat;
+  background: linear-gradient(to right, #ffe5ec, #d0f4de);
   display: flex;
   flex-direction: column;
   justify-content: center;
