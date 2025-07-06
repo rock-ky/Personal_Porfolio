@@ -1,18 +1,23 @@
+*{
+  background: 
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right, #ffe5ec, #d0f4de);
   color: #333;
   scroll-behavior: smooth;
+  line-height: 1.5;
 }
 
 .header {
   background-color: #ffb3c6;
-  padding: 1em 2em;
+  padding: 1pt 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -27,12 +32,24 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5em;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #2d3436;
   font-weight: bold;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #a4133c;
+  outline: 2px solid #2d3436;
+  outline-offset: 2px;
+  background: #ffe5ec;
+  border-radius: 2px;
 }
 
 .hero {
@@ -55,27 +72,59 @@ body {
   font-size: 1.5em;
 }
 
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 section {
   padding: 4em 2em;
   max-width: 800px;
   margin: auto;
 }
 
+.socials {
+  padding: 0;
+  margin: 1em 0 0 0;
+  display: flex;
+  gap: 1em;
+}
+
 .socials li {
   list-style: none;
-  margin: 0.5em 0;
+  margin: 0;
+}
+
+.socials a {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.socials a:hover,
+.socials a:focus {
+  color: #a4133c;
 }
 
 .footer {
   background-color: #ffb3c6;
   text-align: center;
-  padding: 1em;
+  padding: 1px;
   margin-top: 2em;
 }
 
+
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px);}
-  100% { opacity: 1; transform: translateY(0);}
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-text {
@@ -92,3 +141,44 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero {
+    height: auto;
+    padding: 2em 0;
+  }
+
+  .intro {
+    font-size: 2em;
+  }
+
+  .tagline {
+    font-size: 1em;
+  }
+
+  main,
+  section {
+    padding: 2em 1em;
+    max-width: 100%;
+  }
+}
+
